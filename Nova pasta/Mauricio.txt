@@ -1,0 +1,143 @@
+https://www.invertexto.com/atvi1
+
+
+Classes e seus atributos
+1. Livro
+Atributos:
+	isbn: String (identificador único do livro)
+	titulo: String
+	anoPublicacao: Int
+	editora: Editora
+	autores: List[Autor]
+Relacionamentos:
+	Um livro pertence a uma editora.
+	Um livro tem no mínimo um autor.
+
+2. Editora
+Atributos:
+	id: Int (identificador único da editora)
+	nome: String
+	endereco: String
+Relacionamentos:
+	Uma editora pode publicar vários livros.
+
+3. Autor
+Atributos:
+	id: Int (identificador único do autor)
+	nome: String
+	biografia: String
+Relacionamentos:
+	Um autor pode escrever vários livros.
+
+4. Usuário
+Atributos:
+	id: Int (identificador único do usuário)
+	nome: String
+	email: String
+Relacionamentos:
+	Usuário é uma classe base para Aluno, Atendente e Bibliotecária.
+
+5. Aluno (herda de Usuário)
+Atributos:
+	matricula: String (identificador único do aluno)
+	curso: String
+Relacionamentos:
+	Um aluno pode realizar vários empréstimos.
+
+6. Atendente (herda de Usuário)
+Atributos:
+	turno: String (Turno de trabalho do atendente)
+Relacionamentos:
+	Um atendente pode registrar vários empréstimos.
+
+7. Bibliotecária (herda de Usuário)
+Atributos:
+	registroProfissional: String (identificador único da bibliotecária)
+Relacionamentos:
+	Uma bibliotecária pode gerenciar vários livros e usuários.
+
+8. Empréstimo
+Atributos:
+	id: Int (identificador único do empréstimo)
+	dataEmprestimo: Date
+	dataDevolucao: Date
+	livro: Livro
+	aluno: Aluno
+	atendente: Atendente
+Relacionamentos:
+	Um empréstimo envolve um livro, um aluno e um atendente.
+	Diagrama de Classes Simplificado
+    +-------------------+
+    |      Editora      |
+    +-------------------+
+    | - id: Int         |
+    | - nome: String    |
+    | - endereco: String|
+    +-------------------+
+            |
+            | 1..* (Livros)
+            |
+    +-------------------+
+    |       Livro       |
+    +-------------------+
+    | - isbn: String    |
+    | - titulo: String  |
+    | - anoPublicacao: Int |
+    | - editora: Editora |
+    +-------------------+
+            |
+            | 1..* (Autores)
+            |
+    +-------------------+
+    |       Autor       |
+    +-------------------+
+    | - id: Int         |
+    | - nome: String    |
+    | - biografia: String|
+    +-------------------+
+            |
+            | 0..* (Livros)
+            |
+    +-------------------+
+    |      Usuário      |
+    +-------------------+
+    | - id: Int         |
+    | - nome: String    |
+    | - email: String   |
+    +-------------------+
+            |
+            | 1..* (Herança)
+            +-----------+
+                        |
+        +---------------+-------------------+
+        |               |                   |
++---------------+  +---------------+  +-------------------+
+|     Aluno     |  |   Atendente   |  |   Bibliotecária   |
++---------------+  +---------------+  +-------------------+
+| - matricula: String| - turno: String | - registroProfissional: String|
+| - curso: String   |               |                    |
++---------------+  +---------------+  +-------------------+
+            |
+            | 1..* (Empréstimos)
+            |
+    +-------------------+
+    |    Empréstimo     |
+    +-------------------+
+    | - id: Int         |
+    | - dataEmprestimo: Date |
+    | - dataDevolucao: Date  |
+    | - livro: Livro    |
+    | - aluno: Aluno    |
+    | - atendente: Atendente |
+    +-------------------+
+
+
+Descrição dos Relacionamentos
+Editora possui vários Livros.
+Livro pertence a uma Editora e tem no mínimo um Autor.
+Autor pode escrever vários Livros.
+Usuário é a classe base para Aluno, Atendente e Bibliotecária.
+Aluno realiza vários Empréstimos.
+Atendente registra vários Empréstimos.
+Empréstimo envolve um Livro, um Aluno e um Atendente.
+Com essa estrutura, a Escola de Idiomas Phoenix poderá controlar os empréstimos de livros de maneira eficaz, armazenando todas as informações relevantes sobre livros, usuários e empréstimos.

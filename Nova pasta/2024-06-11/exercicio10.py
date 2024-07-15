@@ -1,0 +1,1 @@
+# 10. criar uma lista e print dentro do dicionario max. 5 linhas esse codigo

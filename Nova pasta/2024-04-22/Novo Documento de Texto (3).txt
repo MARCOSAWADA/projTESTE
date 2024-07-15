@@ -1,0 +1,4 @@
+
+if numero1 > numero2:		1ºopção
+elif numero2 > numero1:		2ºopção
+else: ("Números iguais.")	iguais

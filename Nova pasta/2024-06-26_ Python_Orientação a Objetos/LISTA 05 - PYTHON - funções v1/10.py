@@ -1,0 +1,1 @@
+# Elabore uma função que receba três notas de um aluno

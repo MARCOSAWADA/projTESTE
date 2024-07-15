@@ -1,0 +1,27 @@
+por que tem i += 1 usando python no while
+
+O trecho de código que você mencionou, i += 0, pode parecer estranho à primeira vista, 
+mas na verdade não faz diferença no resultado do loop. Vamos entender o que está acontecendo:
+
+1. Inicialização da variável i:
+	Antes de entrar no loop while, a variável i deve ser inicializada com algum valor. 
+No exemplo que você forneceu, não vemos a inicialização de i, mas vamos assumir que ela foi definida 
+anteriormente.
+
+2. Execução do loop while:
+	O loop while executa um conjunto de instruções enquanto uma condição é verdadeira.
+	No seu exemplo, a condição é i < 6. Isso significa que o loop continuará a ser executado 
+enquanto o valor de i for menor que 6.
+
+3. Incremento de i:
+	A linha i += 0 é onde ocorre o incremento da variável i.
+	No entanto, i += 0 é equivalente a i = i + 0, o que não altera o valor de i.
+	Em outras palavras, essa linha não faz nada em termos de incremento ou alteração do valor de i.
+
+4. Resultado:
+	O loop continuará a ser executado até que i atinja o valor 6 (ou seja, enquanto i for menor que 6).
+	Se você tivesse usado i += 1 em vez de i += 0, o valor de i aumentaria em 1 a cada iteração do loop.
+
+Em resumo, a linha i += 0 não tem efeito prático no resultado do loop. Ela não altera o valor de i, mas também 
+não causa nenhum problema. É provável que tenha sido um erro de digitação ou um descuido no código original. 
+O importante é garantir que o incremento correto (por exemplo, i += 1) seja usado para evitar loops infinitos1.

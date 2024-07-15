@@ -1,0 +1,3 @@
+atributo = nome, raça, tipo
+
+metodo = miar, pular, latir

@@ -1,0 +1,49 @@
+
+not 97+1 ==y or not 98+2 ==100 and x<y
+	98=98 or not 100 ==100 x < y
+falso			OK
+
+
+A=TRUE
+B=FALSO
+C=TRUE
+
+RES= A OR (B AND C)
+FALSO			x	true
+
+
+idade=4
+5<=idade<=100
+5 <=4 <=100
+falso			ok	
+
+
+m=4
+n8
+res=(m+n<10) and (m<n)
+    4+8<10 and 4<8
+    12<10 and 4<8
+
+error			OK	
+
+
+3+4
+3==4	ESTE É O CERTO
+3+4==7	X		X
+TRUE
+FALSO
+
+A=20
+B=20
+B=40
+C=20
+D=A+B+C
+D=20+40+20
+
+
+X=7
+Y=3
+Z=5
+Z>X AND NOT Y<Z
+5>7 AND 3<5
+TRUE		X	FALSO

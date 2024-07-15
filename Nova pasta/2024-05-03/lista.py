@@ -1,0 +1,6 @@
+# QUAL NUMERO CORRESPONDE A LETRA
+
+nome = "GUILHERME"
+
+print(nome[4])
+
